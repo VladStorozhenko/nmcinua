@@ -1,49 +1,19 @@
-<?php 
-
-
+<?php
 
 /*
-
 Template Name: Главная
-
 */
-
-
 
 /**
 
  * ===
-
- * Index file 
-
+ * Index file
  * ===
 
- * 
-
- * @package nmc
-
- * 
-
- * @author Vladislav Storozhenko
-
- */
-
-
-
-?>
-
-
-
-<?php 
-
 /* Get header */
-
 get_header();
-
 /* Main css -- enqueue */
-
 wp_enqueue_style('nmc-main-css');
-
 ?>
 
 <!-- Index hero -->
@@ -56,7 +26,7 @@ wp_enqueue_style('nmc-main-css');
 
     <div class="container text-center hero-content px-0">
 
-        <h1 class='mx-auto'>НАУЧНЫЙ МЕДИЦИНСКИЙ ЦЕНТР - "ВАШ ВРАЧ"</h1>
+        <h1 class='mx-auto'><?php _e('НАУЧНЫЙ МЕДИЦИНСКИЙ ЦЕНТР - "ВАШ ВРАЧ"', 'nmc-theme') ?></h1>
 
         <p class='mx-auto'>Современный консультативно-диагностический центр в городе Харькове</p>
 
