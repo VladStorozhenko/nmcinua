@@ -2,285 +2,284 @@
  * ===
  * Contacts css file 
  * ===
- * 
- * @package nmc
- * 
- * @author Vladislav Storozhenko
  */
 
 /* Contacts grid */
-
 .contacts-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 75px;
-    column-gap: 75px;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    h2 {
-        font-size: 22px;
-        color: #115282;
-        margin-left: 50px;
-    }
-    .phone {
-        display: inline;
-    }
-    .row-2 {
-        margin-top: 75px;
-    }
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 75px;
+  column-gap: 75px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 
-/* End contacts grid */
+  h2 {
+    font-size: 22px;
+    color: #115282;
+    margin-left: 50px;
+  }
+
+  .phone {
+    display: inline;
+  }
+
+  .row-2 {
+    margin-top: 75px;
+  }
+}
 
 /* Map styles */
-
 .map-wrapper {
-    iframe {
-        width: 100%;
-        height: 600px;
-    }
+  iframe {
+    width: 100%;
+    height: 600px;
+  }
 }
 
-/* End map styles */
-
-// Index action block styles 
-
+// Index action block styles
 .index-action-block {
-    margin-top: 70px;
-    padding: 100px 0 30px 0;
-    position: relative; 
-    background: rgba(17, 82, 130, 0.8);
-    color: white;
+  margin-top: 70px;
+  padding: 100px 0 30px 0;
+  position: relative;
+  background: rgba(17, 82, 130, 0.8);
+  color: white;
 }
-
-// End index action block styles 
 
 // Index contacts styles
-
 .index-contacts {
-    button {
-        margin: 40px 0 40px 0;
-    }
-    h2 {
-        width: 70%;
-    }
-}
+  button {
+    margin: 40px 0 40px 0;
+  }
 
-// End index contacts styles
+  h2 {
+    width: 70%;
+  }
+}
 
 // Index mailing styles
-
 .index-mailing {
-    text-align: center;
-    border-top: 1px solid white;
-    h2 {
-        padding-top: 100px;
-        width: 45%;
-        margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid white;
+
+  h2 {
+    padding-top: 100px;
+    width: 45%;
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 60%;
+      margin: 50px auto;
+      padding: 12px 25px;
+      background: none;
+      border: 2px solid white;
+      color: white;
+      border-radius: 40px;
+      letter-spacing: 0.05em;
+
+      &::placeholder {
+        color: white;
+      }
     }
-    form {
-        display: flex;
-        flex-direction: column;
-        input {
-            width: 60%;
-            margin: 50px auto;
-            padding: 12px 25px;
-            background: none;
-            border: 2px solid white;
-            color: white;
-            border-radius: 40px;
-            letter-spacing: 0.05em;
-            &::placeholder {
-                color: white;
-            }
-        }
-        button {
-            width: 30%;
-            margin: 0 auto;
-        }
+
+    button {
+      width: 30%;
+      margin: 0 auto;
     }
+  }
 }
 
-// End index mailing styles
-
-@media screen and (min-width: 1024px) and (max-height: 900px)  {
-    // contacts grid
-    .contacts-grid {
-        h2 {
-            font-size: 18px;
-        }
-        img {
-            width: 70px;
-            height: 70px;
-        }
+@media screen and (min-width: 1024px) and (max-height: 900px) {
+  // contacts grid
+  .contacts-grid {
+    h2 {
+      font-size: 18px;
     }
 
-    // map 
-    .map-wrapper {
-        iframe {
-            height: 350px;
-        }
+    img {
+      width: 70px;
+      height: 70px;
     }
+  }
 
-    // action block
-    .index-action-block {
-        margin-bottom: 70px;
-        padding-top: 60px;
-        padding-bottom: 60px;
+  // map
+  .map-wrapper {
+    iframe {
+      height: 350px;
     }
+  }
 
-    // mailing
-    .index-mailing {
-        h2 {
-            padding-top: 40px;
-        }
+  // action block
+  .index-action-block {
+    margin-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  // mailing
+  .index-mailing {
+    h2 {
+      padding-top: 40px;
     }
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-        // contacts grid
-        .contacts-grid {
-            h2 {
-                font-size: 16px;
-            }
-            img {
-                width: 50px;
-                height: 50px;
-            }
-        }
-    
-        // map 
-        .map-wrapper {
-            iframe {
-                height: 350px;
-            }
-        }
-    
-        // action block
-        .index-action-block {
-            margin-bottom: 70px;
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
+  // contacts grid
+  .contacts-grid {
+    h2 {
+      font-size: 16px;
+    }
 
-        // contacts
-        .index-contacts h2 {
-            font-size: 24px;
-            width: 70%;
-        }
-    
-        // mailing
-        .index-mailing {
-            h2 {
-                padding-top: 30px;
-                font-size: 24px;
-                width: 45%;
-            }
-            form {
-                button {
-                    width: 40%;
-                }
-            }
-        }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  // map
+  .map-wrapper {
+    iframe {
+      height: 350px;
+    }
+  }
+  // action block
+  .index-action-block {
+    margin-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  // contacts
+  .index-contacts h2 {
+    font-size: 24px;
+    width: 70%;
+  }
+  // mailing
+  .index-mailing {
+    h2 {
+      padding-top: 30px;
+      font-size: 24px;
+      width: 45%;
+    }
+
+    form {
+      button {
+        width: 40%;
+      }
+    }
+  }
 }
 
-
 @media screen and (max-width: 767px) {
-    // contacts grid
-    .contacts-grid {
-        grid-template-columns: 1fr;
-        row-gap: 50px;
-        div {
-            display: flex;
-            flex-direction: column;
-        }
-        .phone {
-            display: block;
-            margin-bottom: 0;
-        }
-        h2 {
-            font-size: 24px;
-            margin-left: 0;
-            width: 70%;
-            text-align: center;
-        }
-        img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 30px;
-        }
-        .row-2 {
-            margin-top: 0;
-        }
-        .email {
-            grid-row-start: 2;
-        }
-        .time {
-            grid-row-start: 3;
-        }
+  // contacts grid
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+
+    div {
+      display: flex;
+      flex-direction: column;
     }
 
-    // map 
-    .map-wrapper {
-        iframe {
-            height: 350px;
-        }
+    .phone {
+      display: block;
+      margin-bottom: 0;
     }
 
-            // index action block
-            .index-action-block {
-                padding: 50px 0 100px 0;
-                margin-top: 70px;
-                margin-bottom: 100px;
-            }
-        
-            // index contacts 
-            .index-contacts {
-                .contacts-title {
-                    font-size: 24px;
-                    width: 90%;
-                }
-                button {
-                    margin: 40px 0 50px 0;
-                }
-                .row {
-                    width: 100%;
-                    padding-left: 0;
-                    padding-right: 0;
-                    h3 {
-                        font-size: 14px;
-                    }
-                    p {
-                        font-size: 13px;
-                    }
-                    .col-1 {
-                        display: none;
-                    }
-                    .address-block {
-                        padding-right: 0;
-                    }
-                    .phones-block {
-                        padding-left: 0;
-                        align-items: flex-end !important;
-                    }
-                }
-            }
-        
-            // index mailing 
-            .index-mailing h2 {
-                width: 90%;
-                margin: auto;
-                padding-top: 30px;
-                font-size: 24px;
-            }
-            .index-mailing form {
-                width: 90% !important;
-            }
-            .index-mailing form input {
-                width: 100%;
-            }
-            .index-mailing form button {
-                width: 60%;
-            }
+    h2 {
+      font-size: 24px;
+      margin-left: 0;
+      width: 70%;
+      text-align: center;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    .row-2 {
+      margin-top: 0;
+    }
+
+    .email {
+      grid-row-start: 2;
+    }
+
+    .time {
+      grid-row-start: 3;
+    }
+  }
+  // map
+  .map-wrapper {
+    iframe {
+      height: 350px;
+    }
+  }
+  // index action block
+  .index-action-block {
+    padding: 50px 0 100px 0;
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+
+  // index contacts
+  .index-contacts {
+    .contacts-title {
+      font-size: 24px;
+      width: 90%;
+    }
+
+    button {
+      margin: 40px 0 50px 0;
+    }
+
+    .row {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      .col-1 {
+        display: none;
+      }
+
+      .address-block {
+        padding-right: 0;
+      }
+
+      .phones-block {
+        padding-left: 0;
+        align-items: flex-end !important;
+      }
+    }
+  }
+  // index mailing
+  .index-mailing h2 {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 24px;
+  }
+  .index-mailing form {
+    width: 90% !important;
+  }
+  .index-mailing form input {
+    width: 100%;
+  }
+  .index-mailing form button {
+    width: 60%;
+  }
 }

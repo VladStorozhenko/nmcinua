@@ -4,16 +4,16 @@
  * ===
  */
 
-jQuery(document).ready(function (){
+jQuery(document).ready(function () {
     // standart form
-    jQuery('#standart-form').on('submit', function(e){
+    jQuery('#standart-form').on('submit', function (e) {
         e.preventDefault();
         let form = jQuery(this);
         let name = form.find('#name').val();
         let tel = form.find('#tel').val();
 
         ajaxurl = form.data('url');
-        if(!name || !tel) {
+        if (!name || !tel) {
             return;
         }
 
@@ -28,7 +28,7 @@ jQuery(document).ready(function (){
             error: function (response) {
                 alert("Ошибка");
             },
-            success: function(response) {
+            success: function (response) {
                 if (response === 0) {
                     console.log('Error');
                 } else {
@@ -36,10 +36,10 @@ jQuery(document).ready(function (){
                 }
             }
         })
-    }) ;
+    });
 
     // handle specialist form
-    jQuery('#specialist-form').on('submit', function(e) {
+    jQuery('#specialist-form').on('submit', function (e) {
         e.preventDefault();
 
         let form = jQuery(this);
@@ -49,7 +49,7 @@ jQuery(document).ready(function (){
         let selectedSpecialist = form.find('#specialist-name').val();
         let ajaxurl = form.data('url');
 
-        if(!forSpecialistName || !forSpecialistTel) {
+        if (!forSpecialistName || !forSpecialistTel) {
             return;
         }
 
@@ -67,7 +67,7 @@ jQuery(document).ready(function (){
                 alert("Ошибка");
                 console.log(response);
             },
-            success: function(response) {
+            success: function (response) {
                 if (response === 0) {
                     alert("Ошибка");
                     console.log("Error");

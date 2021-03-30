@@ -2,18 +2,9 @@
  * ===
  * Services css file 
  * ===
- * 
- * @package nmc
- * 
- * @author Vladislav Storozhenko
  */
 
-// update 
-
-
-
 // update
-
 .consultants {
   margin-bottom: 150px;
 }
@@ -29,10 +20,12 @@
   margin-bottom: 30px;
   color: #bbbbbb;
   margin-top: 10px;
+
   a {
     text-transform: uppercase;
     padding: 10px 5px;
     color: #bbbbbb;
+
     &.last {
       text-decoration: underline;
     }
@@ -40,33 +33,37 @@
 }
 
 /* single specialist */
-
 // top info
-
 .top-info {
   margin: 50px 0 100px 0;
+
   p {
     color: #5c5c5c;
     font-size: 16px;
   }
+
   .text-medium {
     font-weight: 500;
   }
+
   h1 {
     font-size: 36px;
     color: #115282;
     font-weight: 700;
     margin-bottom: 25px;
   }
+
   .post {
     font-weight: 500;
   }
+
   .info {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
+
   img {
     width: 400px;
     height: 400px;
@@ -74,18 +71,22 @@
     object-fit: cover;
     object-position: top;
   }
+
   .top-info-action-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
+
     .consultations-wrapper {
       margin-top: 10px;
+
       p {
         margin: 5px 0;
       }
     }
   }
+
   a {
     color: #073e66;
     text-decoration: underline;
@@ -95,10 +96,7 @@
   }
 }
 
-// end top info
-
 // the content
-
 .specialist-content {
   h1,
   h2,
@@ -113,6 +111,7 @@
   table {
     color: #5c5c5c;
   }
+
   p,
   a,
   ul li,
@@ -126,12 +125,14 @@
 .back-to-list-wrapper {
   margin-bottom: 100px;
 }
+
 .back-to-list {
   text-transform: uppercase;
   color: #073e66;
   text-decoration: underline;
   font-size: 18px;
   font-weight: bold;
+
   &:hover {
     font-weight: 900;
     color: #073e66;
@@ -140,22 +141,20 @@
   }
 }
 
-// end the content
-
-/* end single specialist */
-
 // ! Media queries
-
 @media screen and (min-width: 1024px) and (max-height: 900px) {
   // single specialist
   .top-info {
     margin-top: 20px;
+
     img {
       width: 300px;
       height: 300px;
     }
+
     .top-info-action-wrapper {
       width: 95%;
+
       button {
         font-size: 16px;
       }
@@ -167,18 +166,22 @@
   // single specialist
   .top-info {
     margin-top: 20px;
+
     .photo-block,
     .info-block {
       padding-left: 0;
     }
+
     img {
       width: 300px;
       height: 300px;
       margin-bottom: 50px;
     }
+
     .top-info-action-wrapper {
       width: 95%;
       margin-top: 30px;
+
       button {
         font-size: 16px;
       }
@@ -194,36 +197,41 @@
   .top-info {
     margin-top: 20px;
     margin-bottom: 40px;
+
     .photo-block,
     .info-block {
       padding-left: 0;
     }
+
     .photo-block {
       display: flex;
       justify-content: center;
     }
+
     h1 {
       text-align: center;
       font-size: 24px;
       width: 70%;
       margin: 0 auto 25px auto;
     }
+
     img {
       width: 250px;
       height: 250px;
       margin-bottom: 50px;
     }
+
     .top-info-action-wrapper {
       margin-top: 30px;
       flex-direction: column;
       align-items: center;
+
       button {
         font-size: 16px;
         margin-bottom: 30px;
       }
     }
   }
-
   // specialist content
   .specialist-content {
     .w-75 {
@@ -231,7 +239,6 @@
     }
   }
 }
-
 
 // principal update
 .principal {
