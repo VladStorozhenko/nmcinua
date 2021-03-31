@@ -52,7 +52,7 @@ wp_enqueue_style( 'nmc-specialists-css' );
         </div>
     </div>
     <!-- End specialists grid-->
-    <h1 class="section-title mt-3">Научные консультанты</h1>
+    <h1 class="section-title mt-3"><?php _e( 'Научные консультанты', 'nmc-theme' ) ?></h1>
     <!-- Specialists grid-->
     <div class="container">
         <div class="specialists consultants">
@@ -93,7 +93,7 @@ wp_enqueue_style( 'nmc-specialists-css' );
 			?>
         </div>
     </div>
-    <h1 class="section-title mt-3">Специалисты</h1>
+    <h1 class="section-title mt-3"><?php _e( 'Специалисты', 'nmc-theme' ) ?></h1>
     <!-- Specialists grid-->
     <div class="container">
         <div class="specialists">

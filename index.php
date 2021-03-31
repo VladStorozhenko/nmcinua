@@ -16,15 +16,15 @@ wp_enqueue_style( 'nmc-main-css' );
              style='background-image: url("<?php echo get_template_directory_uri() . '/inc/images/photo-index.jpg' ?>")'></div>
         <div class="container text-center hero-content px-0">
             <h1 class='mx-auto'><?php _e( 'НАУЧНЫЙ МЕДИЦИНСКИЙ ЦЕНТР - "ВАШ ВРАЧ"', 'nmc-theme' ) ?></h1>
-            <p class='mx-auto'>Современный консультативно-диагностический центр в городе Харькове</p>
-            <button class="button button-white" data-toggle="modal" data-target="#modal">Записаться на приём</button>
+            <p class='mx-auto'><?php _e('Современный консультативно-диагностический центр в городе Харькове', 'nmc-theme') ?></p>
+            <button class="button button-white" data-toggle="modal" data-target="#modal"><?php _e('Записаться на приём', 'nmc-theme') ?></button>
         </div>
         <div class="hero-arrow-down-wrapper">
             <img src="<?php echo get_template_directory_uri() . '/inc/icons/hero-arrow-down.svg' ?>" alt="Вниз">
         </div>
     </div>
     <!-- Index services -->
-    <h2 class='section-title'>Услуги</h2>
+    <h2 class='section-title'><?php _e('Услуги', 'nmc-theme') ?></h2>
     <div class="container">
         <div class='services index-services'>
 			<?php
@@ -57,7 +57,7 @@ wp_enqueue_style( 'nmc-main-css' );
     </div>
     <div class="text-center">
         <a href="<?php echo get_page_link( 9 ) ?>">
-            <button class="button button-blue index-services-show-all">Показать все</button>
+            <button class="button button-blue index-services-show-all"><?php _e('Показать все', 'nmc-theme') ?></button>
         </a>
     </div>
     <!-- Index about us  -->
@@ -65,28 +65,28 @@ wp_enqueue_style( 'nmc-main-css' );
         <div class="block-background"
              style='background-image: url("<?php echo get_template_directory_uri() . '/inc/images/index-about-us.jpg' ?>")'></div>
         <div class="container">
-            <h2 class='section-title mb-3'>О нас</h2>
-            <h3 class='about-us-title'>"НМЦ - Ваш врач" предоставляет широкий спектр диагностических и лечебных
-                услуг:</h3>
+            <h2 class='section-title mb-3'><?php _e('О нас', 'nmc-theme') ?></h2>
+            <h3 class='about-us-title'><?php _e('"НМЦ - Ваш врач" предоставляет широкий спектр диагностических и лечебных
+                услуг', 'nmc-theme') ?>:</h3>
             <ul>
                 <li>
-                    для взрослых в области: кардиологии, неврологии, эндокринологии, пульмонологии, рефлексотерапии,
-                    ультразвуковой диагностики, функциональной диагностики
+                    <?php _e('для взрослых в области: кардиологии, неврологии, эндокринологии, пульмонологии, рефлексотерапии,
+                    ультразвуковой диагностики, функциональной диагностики', 'nmc-theme') ?>
                 </li>
                 <li>
-                    для детей в области: педиатрии, детской кардиоревматологии, детской неврологии, детской
-                    отоларингологии, детской гастроэнтерологии, детской аллергологии, детской психологии.
+                    <?php _e('для детей в области: педиатрии, детской кардиоревматологии, детской неврологии, детской
+                    отоларингологии, детской гастроэнтерологии, детской аллергологии, детской психологии.', 'nmc-theme') ?>
                 </li>
             </ul>
             <div class="text-center">
                 <a href="<?php echo get_page_link( 7 ); ?>">
-                    <button class="button button-blue">Читать ещё</button>
+                    <button class="button button-blue"><?php _e('Читать ещё', 'nmc-theme') ?></button>
                 </a>
             </div>
         </div>
     </div>
     <!-- Index reasons -->
-    <h2 class="section-title">5 причин выбрать нашу клинику</h2>
+    <h2 class="section-title"><?php _e('5 причин выбрать нашу клинику', 'nmc-theme') ?></h2>
     <!-- Index reasons version 2 -->
     <div class="container reasons-wrapper">
         <ul class="nav nav-tabs w-100 d-flex justify-content-between" id="myTab" role="tablist">
@@ -96,7 +96,7 @@ wp_enqueue_style( 'nmc-main-css' );
                    aria-selected="true">
                     <img src="<?php echo get_template_directory_uri() . '/inc/icons/consultants.svg' ?>"
                          alt="Научные консультанты">
-                    <p>3 научных консультанта</p>
+                    <p><?php _e('Научные консультанты', 'nmc-theme') ?></p>
                 </a>
             </li>
             <li class="nav-item reasons-nav-item reasons-nav-item-white">
@@ -105,21 +105,21 @@ wp_enqueue_style( 'nmc-main-css' );
                    aria-selected="false">
                     <img src="<?php echo get_template_directory_uri() . '/inc/icons/laboratory.svg' ?>"
                          alt="Лабораторная диагностика">
-                    <p>ЛАБОРАТОРНАЯ ДИАГНОСТИКА</p>
+                    <p><?php _e("Лабораторная диагностика", "nmc-theme") ?></p>
                 </a>
             </li>
             <li class="nav-item reasons-nav-item reasons-nav-item-blue">
                 <a class="nav-link" id="place-tab" data-toggle="tab" href="#place" role="tab" aria-controls="place"
                    aria-selected="false">
                     <img src="<?php echo get_template_directory_uri() . '/inc/icons/place.svg' ?>" alt="расположение">
-                    <p>УДОБНОЕ РАСПОЛОЖЕНИЕ</p>
+                    <p><?php _e('Удобное рассположение', 'nmc-theme') ?></p>
                 </a>
             </li>
             <li class="nav-item reasons-nav-item reasons-nav-item-white">
                 <a class="nav-link" id="time-tab" data-toggle="tab" href="#time" role="tab" aria-controls="time"
                    aria-selected="false">
                     <img src="<?php echo get_template_directory_uri() . '/inc/icons/clock.svg' ?>" alt="стационар">
-                    <p>ДНЕВНОЙ СТАЦИОНАР</p>
+                    <p><?php _e("Дневной стационар", 'nmc-theme') ?></p>
                 </a>
             </li>
 
@@ -129,7 +129,7 @@ wp_enqueue_style( 'nmc-main-css' );
                    aria-selected="false">
                     <img src="<?php echo get_template_directory_uri() . '/inc/icons/individual.svg' ?>"
                          alt="идндивидуальный подход">
-                    <p>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
+                    <p><?php _e('Индивидуальный подход', 'nmc-theme') ?></p>
                 </a>
             </li>
         </ul>
@@ -200,26 +200,26 @@ wp_enqueue_style( 'nmc-main-css' );
              style='background-image: url("<?php echo get_template_directory_uri() . '/inc/images/photo3.jpg' ?>")'></div>
         <!-- Index contacts  -->
         <div class="container index-contacts mx-auto">
-            <h2 class='text-center font-weight-bold mx-auto contacts-title'>Мы всегда рады оказать своевременную и
-                квалифицированную помощь!</h2>
+            <h2 class='text-center font-weight-bold mx-auto contacts-title'><?php _e('Мы всегда рады оказать своевременную и
+                квалифицированную помощь!', 'nmc-theme') ?></h2>
             <div class="row mx-auto justify-content-center">
                 <div class="col-1 col-xl-2"></div>
                 <div class="col-6 col-md-5 col-xl-4 d-flex flex-column align-items-center justify-content-center address-block">
                     <div>
-                        <h3>Адрес:</h3>
-                        <p>пр. Науки,77, г. Харьков 61103, Украина</p>
+                        <h3><?php _e('Адрес', 'nmc-theme') ?>:</h3>
+                        <p><?php _e('пр. Науки,77, г. Харьков 61103, Украина', 'nmc-theme') ?></p>
                     </div>
                 </div>
                 <div class="col-6 col-md-5 col-xl-4 d-flex flex-column align-items-center phones-block">
                     <div>
-                        <h3>Телефоны:</h3>
+                        <h3><?php _e('Телефоны', 'nmc-theme') ?>:</h3>
                         <p class='py-0 mb-0'>(099) 730 33 03, <br>(097) 370 33 03</p>
                     </div>
                 </div>
                 <div class="col-1 col-xl-2"></div>
             </div>
             <div class="text-center">
-                <button class="button button-white" data-toggle="modal" data-target="#modal">Записаться на приём
+                <button class="button button-white" data-toggle="modal" data-target="#modal"><?php _e('Записаться на приём', 'nmc-theme') ?>
                 </button>
             </div>
         </div>

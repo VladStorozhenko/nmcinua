@@ -12,7 +12,7 @@ wp_enqueue_style( 'nmc-contacts-css' );
     <div class="container breadcrumbs-on-page">
 		<?php echo do_shortcode( '[flexy_breadcrumb]' ); ?>
     </div>
-    <div class="section-title mt-3">Контакты</div>
+    <div class="section-title mt-3"><?php _e('Контакты', 'nmc-theme') ?></div>
     <!-- Contacts grid -->
     <div class="container contacts-grid">
         <!-- phone -->
@@ -24,7 +24,7 @@ wp_enqueue_style( 'nmc-contacts-css' );
         <!-- time -->
         <div class="d-flex align-items-center time">
             <img src="<?php echo get_template_directory_uri() . '/inc/icons/contacts-clock.svg' ?>" alt="время работы">
-            <h2 class="contacts-text">Ежедневно с 9:00 до 19:00<br>(Лаборатория с 08:00 до 12:00)</h2>
+            <h2 class="contacts-text"><?php _e('Ежедневно с 9:00 до 19:00', 'nmc-theme') ?><br><?php _e('(Лаборатория с 08:00 до 12:00)', 'nmc-theme') ?></h2>
         </div>
         <!-- e-mail -->
         <div class="d-flex align-items-center email">
@@ -34,13 +34,13 @@ wp_enqueue_style( 'nmc-contacts-css' );
         <!-- address -->
         <div class="d-flex align-items-center">
             <img src="<?php echo get_template_directory_uri() . '/inc/icons/contacts-address.svg' ?>" alt="адресс">
-            <h2 class="contacts-text">пр. Науки, 77,<br>г. Харьков-61103, Украина</h2>
+            <h2 class="contacts-text">пр. Науки, 77,<br><?php _e('г. Харьков-61103, Украина', 'nmc-theme') ?></h2>
         </div>
     </div>
 
     <!-- Video -->
     <div class="container d-flex flex-column">
-        <h2 class="section-title">Как к нам добраться?</h2>
+        <h2 class="section-title"><?php _e('Как к нам добраться?', 'nmc-theme') ?></h2>
         <video src="<?php echo get_template_directory_uri() . '/inc/video.mp4' ?>" controls
                class='mx-auto mw-100'></video>
     </div>
@@ -56,10 +56,10 @@ wp_enqueue_style( 'nmc-contacts-css' );
              style='background-image: url("<?php echo get_template_directory_uri() . '/inc/images/photo3.jpg' ?>")'></div>
         <!-- Index contacts  -->
         <div class="container index-contacts mx-auto">
-            <h2 class='text-center font-weight-bold mx-auto contacts-title'>Мы всегда рады оказать своевременную и
-                квалифицированную помощь!</h2>
+            <h2 class='text-center font-weight-bold mx-auto contacts-title'><?php _e('Мы всегда рады оказать своевременную и
+                квалифицированную помощь!', 'nmc-theme') ?></h2>
             <div class="text-center">
-                <button class="button button-white" data-toggle="modal" data-target="#modal">Записаться на приём
+                <button class="button button-white" data-toggle="modal" data-target="#modal"><?php _e('Записаться на приём', 'nmc-theme') ?>
                 </button>
             </div>
         </div>
