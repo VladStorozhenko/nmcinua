@@ -105,6 +105,9 @@
 
   .partner {
     transition-duration: 230ms;
+    svg {
+      width: 250px;
+    }
 
     &:hover {
       transform: scale(1.05);
