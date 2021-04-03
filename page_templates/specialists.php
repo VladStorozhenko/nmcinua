@@ -15,20 +15,18 @@ wp_enqueue_style( 'nmc-specialists-css' );
     <div class="container">
         <div class="specialists consultants principal">
 			<?php
-			// get children of current page
-			global $post;
-			$page_id     = $post->ID;
-			$specialists = get_children( array(
-				'post_parent' => $page_id,
-				'post_type'   => 'specialist',
-				'numberposts' => - 1,
-				'post_status' => 'publish'
+			$specialists = get_posts( array(
+				'post_type'        => 'specialist',
+				'numberposts'      => - 1,
+				'post_status'      => 'publish',
+				'suppress_filters' => '0'
 			) );
+
 			if ( $specialists ) {
 				foreach ( $specialists as $specialist ) {
 					$specialist_id   = $specialist->ID;
 					$specialist_name = $specialist->post_title;
-					$specialist_link = $specialist->guid;
+					$specialist_link = get_permalink( $specialist_id );
 					$is_principal    = get_field( 'is_principal', $specialist_id );
 					if ( $is_principal ) {
 						?>
@@ -60,17 +58,18 @@ wp_enqueue_style( 'nmc-specialists-css' );
 			// get children of current page
 			global $post;
 			$page_id     = $post->ID;
-			$specialists = get_children( array(
-				'post_parent' => $page_id,
-				'post_type'   => 'specialist',
-				'numberposts' => - 1,
-				'post_status' => 'publish'
+			$specialists = get_posts( array(
+				'post_type'        => 'specialist',
+				'numberposts'      => - 1,
+				'post_status'      => 'publish',
+				'suppress_filters' => '0'
 			) );
+
 			if ( $specialists ) {
 				foreach ( $specialists as $specialist ) {
 					$specialist_id   = $specialist->ID;
 					$specialist_name = $specialist->post_title;
-					$specialist_link = $specialist->guid;
+					$specialist_link = get_permalink( $specialist_id );
 					$is_consultant   = get_field( 'is_consultant', $specialist_id );
 					if ( $is_consultant ) {
 						?>
@@ -98,21 +97,18 @@ wp_enqueue_style( 'nmc-specialists-css' );
     <div class="container">
         <div class="specialists">
 			<?php
-			// get children of current page
-			global $post;
-			$page_id = $post->ID;
 
-			$specialists = get_children( array(
-				'post_parent' => $page_id,
-				'post_type'   => 'specialist',
-				'numberposts' => - 1,
-				'post_status' => 'publish'
+			$specialists = get_posts( array(
+				'post_type'        => 'specialist',
+				'numberposts'      => - 1,
+				'post_status'      => 'publish',
+				'suppress_filters' => '0'
 			) );
 			if ( $specialists ) {
 				foreach ( $specialists as $specialist ) {
 					$specialist_id   = $specialist->ID;
 					$specialist_name = $specialist->post_title;
-					$specialist_link = $specialist->guid;
+					$specialist_link = get_permalink( $specialist_id );
 					$is_consultant   = get_field( 'is_consultant', $specialist_id );
 					$is_boss         = get_field( 'is_boss', $specialist_id );
 					$is_principal    = get_field( 'is_principal', $specialist_id );

@@ -215,7 +215,7 @@ button:focus {
       display: flex;
       flex-direction: column;
 
-      input {
+      input, select {
         width: 75%;
         margin: 10px auto;
         padding: 12px 25px;
@@ -227,6 +227,16 @@ button:focus {
 
         &::placeholder {
           color: white;
+        }
+      }
+
+      select option {
+        color: black;
+      }
+
+      select {
+        &:focus {
+          outline: none;
         }
       }
 
@@ -268,7 +278,7 @@ button:focus {
   .modal-content .modal-body h2 {
     font-size: 24px;
   }
-  .modal-content .modal-body form input {
+  .modal-content .modal-body form input, .modal-content .modal-body form select {
     width: 100%;
   }
   .modal-content .modal-body form button {
@@ -293,7 +303,7 @@ button:focus {
   .modal-content .modal-body form {
     width: 90% !important;
   }
-  .modal-content .modal-body form input {
+  .modal-content .modal-body form input, .modal-content .modal-body form select {
     width: 100%;
   }
   .modal-content .modal-body form button {

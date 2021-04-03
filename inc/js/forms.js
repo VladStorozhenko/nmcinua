@@ -11,9 +11,10 @@ jQuery(document).ready(function () {
         let form = jQuery(this);
         let name = form.find('#name').val();
         let tel = form.find('#tel').val();
+        let type = form.find('#type').val();
 
         ajaxurl = form.data('url');
-        if (!name || !tel) {
+        if (!name || !tel || !type) {
             return;
         }
 
@@ -23,6 +24,7 @@ jQuery(document).ready(function () {
             data: {
                 name: name,
                 tel: tel,
+                type: type,
                 action: 'nmc_standart_register_form'
             },
             error: function (response) {

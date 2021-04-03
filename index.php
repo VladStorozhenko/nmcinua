@@ -42,7 +42,7 @@ wp_enqueue_style( 'nmc-main-css' );
 					$value = get_field( 'featured', $service->ID );
 					if ( $value[0] == 'checked' ) {
 						?>
-                        <a href="<?php echo $service->guid ?>">
+                        <a href="<?php echo get_permalink( $service->ID ) ?>">
                             <div class="service">
                                 <div class="service-bg-image block-background"
                                      style='background-image: url("<?php echo get_the_post_thumbnail_url( $service->ID ) ?>")'></div>
@@ -155,7 +155,7 @@ wp_enqueue_style( 'nmc-main-css' );
 						foreach ( $specialists as $specialist ) {
 							$specialist_id   = $specialist->ID;
 							$specialist_name = $specialist->post_title;
-							$specialist_link = $specialist->guid;
+							$specialist_link = get_permalink( $specialist_id );
 							$is_consultant   = get_field( 'is_consultant', $specialist_id );
 							$is_boss         = get_field( 'is_boss', $specialist_id );
 							if ( ! $is_boss ) {
@@ -227,7 +227,7 @@ wp_enqueue_style( 'nmc-main-css' );
         </div>
     </div>
     <!-- Partners -->
-    <h2 class="section-title px-0"><?php _e('Наши партнёры', 'nmc-theme') ?></h2>
+    <h2 class="section-title px-0"><?php _e( 'Наши партнёры', 'nmc-theme' ) ?></h2>
     <div class="container">
         <div class="partners mx-auto">
             <a href="https://www.synevo.ua/ua">
