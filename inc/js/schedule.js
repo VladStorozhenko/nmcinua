@@ -19,6 +19,8 @@ jQuery(document).ready(function ($) {
         let value = select.val(); // get selected value
         let ajaxurl = select.data("url");
 
+        alert(value)
+
         // ajax call on select
         $.ajax({
             url: ajaxurl,
@@ -116,7 +118,7 @@ new SlimSelect({
     select: "#type-select",
     searchingText: "Поиск...", // Optional - Will show during ajax request
     searchPlaceholder: "Поиск",
-    placeholder: "Выберите направление",
+    // placeholder: "Выберите направление",
     showSearch: false,
     searchFocus: false, // Whether or not to focus on the search input field
 });

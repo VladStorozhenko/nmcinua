@@ -55,9 +55,6 @@ wp_enqueue_style( 'nmc-specialists-css' );
     <div class="container">
         <div class="specialists consultants">
 			<?php
-			// get children of current page
-			global $post;
-			$page_id     = $post->ID;
 			$specialists = get_posts( array(
 				'post_type'        => 'specialist',
 				'numberposts'      => - 1,
@@ -97,7 +94,6 @@ wp_enqueue_style( 'nmc-specialists-css' );
     <div class="container">
         <div class="specialists">
 			<?php
-
 			$specialists = get_posts( array(
 				'post_type'        => 'specialist',
 				'numberposts'      => - 1,
