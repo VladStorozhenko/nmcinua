@@ -52,12 +52,12 @@ wp_enqueue_style( 'nmc-about-us-css' );
 
     <!-- Paragraph 2 block -->
     <div class="container about-us-paragraph-2">
-        <p><?php ?></p>
+        <p><?php _e( 'Лечение пациентов осуществляется на основании самых современных международных стандартов и рекомендаций. Наши консультанты - доктора и кандидаты медицинских наук, признанные международные и украинские эксперты, сотрудники ведущих кафедр и НИИ Харькова, Москвы, специалисты из Италии, Швейцарии, Великобритании, Германии, Литвы.', 'nmc-theme' ) ?></p>
         <h2><?php _e( 'Мы всегда рады оказать своевременную и квалифицированную помощь!', 'nmc-theme' ) ?></h2>
     </div>
 
     <!-- Partners -->
-    <h2 class="section-title px-0"><?php _e('Наши партнёры', 'nmc-theme') ?></h2>
+    <h2 class="section-title px-0"><?php _e( 'Наши партнёры', 'nmc-theme' ) ?></h2>
     <div class="container">
         <div class="partners mx-auto">
             <a href="https://www.synevo.ua/ua">
