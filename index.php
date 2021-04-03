@@ -29,12 +29,12 @@ wp_enqueue_style( 'nmc-main-css' );
     <div class="container">
         <div class='services index-services'>
 			<?php
-			$services = get_children(
+			$services = get_posts(
 				array(
-					'post_parent' => 9,
-					'post_type'   => 'service',
-					'numberposts' => - 1,
-					'post_status' => 'publish'
+					'post_type'        => 'service',
+					'numberposts'      => - 1,
+					'post_status'      => 'publish',
+					'suppress_filters' => '0'
 				)
 			);
 			if ( $services ) {
@@ -139,16 +139,11 @@ wp_enqueue_style( 'nmc-main-css' );
                  aria-labelledby="consultants-tab">
                 <div class="specialists">
 					<?php
-					// get children of current page
-					global $post;
-					$page_id = $post->ID;
-
-					$specialists = get_children( array(
-						'post_parent' => 11,
-						'post_type'   => 'specialist',
-						'numberposts' => - 1,
-						'post_status' => 'publish'
-
+					$specialists = get_posts( array(
+						'post_type'        => 'specialist',
+						'numberposts'      => - 1,
+						'post_status'      => 'publish',
+						'suppress_filters' => '0'
 					) );
 
 					if ( $specialists ) {
@@ -204,20 +199,27 @@ wp_enqueue_style( 'nmc-main-css' );
             <h2 class='text-center font-weight-bold mx-auto contacts-title'><?php _e( 'Мы всегда рады оказать своевременную и
                 квалифицированную помощь!', 'nmc-theme' ) ?></h2>
             <div class="row mx-auto justify-content-center">
-                <div class="col-1 col-xl-2"></div>
-                <div class="col-6 col-md-5 col-xl-4 d-flex flex-column align-items-center justify-content-center address-block">
+                <!--                <div class="col-1 col-xl-2"></div>-->
+                <div class="col-4 col-md-4 col-12 d-flex flex-column align-items-center justify-content-center address-block">
                     <div>
                         <h3><?php _e( 'Адрес', 'nmc-theme' ) ?>:</h3>
                         <p><?php _e( 'пр. Науки,77, г. Харьков 61103, Украина', 'nmc-theme' ) ?></p>
                     </div>
                 </div>
-                <div class="col-6 col-md-5 col-xl-4 d-flex flex-column align-items-center phones-block">
+                <div class="col-4 col-md-4 col-12 d-flex flex-column align-items-center justify-content-center phones-block">
                     <div>
                         <h3><?php _e( 'Телефоны', 'nmc-theme' ) ?>:</h3>
                         <p class='py-0 mb-0'>(099) 730 33 03, <br>(097) 370 33 03</p>
                     </div>
                 </div>
-                <div class="col-1 col-xl-2"></div>
+                <div class="col-4 col-md-4 col-12 d-flex flex-column align-items-center justify-content-center phones-block">
+                    <div>
+                        <h3><?php _e( 'Время работы', 'nmc-theme' ) ?>:</h3>
+                        <p class='py-0 mb-0'><?php _e( 'Ежедневно', 'nmc-theme' ) ?>
+                            <br> <?php _e( 'с 9:00 до 19:00', 'nmc-theme' ) ?></p>
+                    </div>
+                </div>
+                <!--                <div class="col-1 col-xl-2"></div>-->
             </div>
             <div class="text-center">
                 <button class="button button-white" data-toggle="modal"

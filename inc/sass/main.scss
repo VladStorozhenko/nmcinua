@@ -546,8 +546,8 @@
         font-size: 13px;
       }
 
-      .col-1 {
-        display: none;
+      .col-12 {
+        margin: 15px 0;
       }
 
       .address-block {
@@ -556,7 +556,6 @@
 
       .phones-block {
         padding-left: 0;
-        align-items: flex-end !important;
       }
     }
   }
