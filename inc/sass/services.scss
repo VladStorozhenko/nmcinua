@@ -305,5 +305,67 @@ $transition-duration: 230ms;
 
 .single-service-content {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 65% 35%;
+  .single-service-content-inner {
+    padding-right: 120px;
+  }
+  .single-service-specialist {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 20px;
+    padding: 25px 10px;
+    box-shadow: 4px 4px 4px rgba(17, 82, 130, 0.25), inset 4px 4px 4px rgba(17, 82, 130, 0.25);
+    a {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .specialist-photo {
+      margin: 10px auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+    .specialist-name {
+      text-align: center;
+      color: #115282;
+      font-size: 24px;
+      margin-top: 8px;
+    }
+    .specialist-specialty {
+      text-align: center;
+      font-weight: 700;
+      color: #5C5C5C;
+      font-size: 18px;
+      max-width: 100%;
+    }
+    .specialist-info {
+      text-align: center;
+      color: #5C5C5C;
+      font-size: 16px;
+    }
+    .specialist-price {
+      text-align: center;
+      font-size: 18px;
+      margin: 10px 0;
+      color: #115282;
+    }
+    .specialist-button {
+      margin: 20px auto 30px auto;
+      width: max-content;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .single-service-content {
+    grid-template-columns: 1fr;
+    .single-service-content-inner {
+      padding-right: 0;
+    }
+    .single-service-specialist-wrapper {
+      margin: 30px 0;
+    }
+  }
 }
