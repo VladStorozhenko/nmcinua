@@ -300,3 +300,10 @@ $transition-duration: 230ms;
     }
   }
 }
+
+// Single service specialist update
+
+.single-service-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}

@@ -19,8 +19,6 @@ jQuery(document).ready(function ($) {
         let value = select.val(); // get selected value
         let ajaxurl = select.data("url");
 
-        alert(value)
-
         // ajax call on select
         $.ajax({
             url: ajaxurl,

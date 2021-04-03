@@ -51,7 +51,7 @@ jQuery(document).ready(function () {
         let selectedSpecialist = form.find('#specialist-name').val();
         let ajaxurl = form.data('url');
 
-        if (!forSpecialistName || !forSpecialistTel) {
+        if (!forSpecialistName || !forSpecialistTel || !forSpecialistDate) {
             return;
         }
 
@@ -67,13 +67,13 @@ jQuery(document).ready(function () {
             },
             error: function (response) {
                 alert("Ошибка");
-                console.log(response);
             },
             success: function (response) {
-                if (response === 0) {
+                console.log(response);
+                if (response == 0) {
                     alert("Ошибка");
-                    console.log("Error");
                 } else {
+                    alert('hello');
                     nmc_on_specialist_form_submit_success();
                 }
             }

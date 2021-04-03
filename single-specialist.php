@@ -48,7 +48,8 @@ $disable_appointments = get_field( 'disable_appointments', $page_id );
 					<?php
 					if ( $specialty ) {
 						?>
-                        <p class='specialty'><span class="text-medium"><?php _e('Специальность', 'nmc-theme') ?>:</span> <?php echo $specialty; ?>
+                        <p class='specialty'><span
+                                    class="text-medium"><?php _e( 'Специальность', 'nmc-theme' ) ?>:</span> <?php echo $specialty; ?>
                         </p>
 						<?php
 					}
@@ -101,7 +102,7 @@ $disable_appointments = get_field( 'disable_appointments', $page_id );
 						?>
                         <button class="button button-blue" data-toggle="modal" data-target="#speciliastModal"
                                 id='specialist-button' data-daystoenable="<?php echo $json; ?>"
-                                data-specialist='<?php the_title(); ?>'><?php _e('Записаться на приём', 'nmc-theme') ?>
+                                data-specialist='<?php the_title(); ?>'><?php _e( 'Записаться на приём', 'nmc-theme' ) ?>
                         </button>
 						<?php
 					}
@@ -110,12 +111,14 @@ $disable_appointments = get_field( 'disable_appointments', $page_id );
 						<?php
 						if ( $first_consultation ) {
 							?>
-                            <p><?php _e('Стоимость первичной консультации', 'nmc-theme') ?>: <?php echo $first_consultation; ?></p>
+                            <p><?php _e( 'Стоимость первичной консультации', 'nmc-theme' ) ?>
+                                : <?php echo $first_consultation; ?></p>
 							<?php
 						}
 						if ( $second_consultation ) {
 							?>
-                            <p><?php _e('Стоимость повторной консультации', 'nmc-theme') ?>: <?php echo $second_consultation; ?></p>
+                            <p><?php _e( 'Стоимость повторной консультации', 'nmc-theme' ) ?>
+                                : <?php echo $second_consultation; ?></p>
 							<?php
 						}
 						?>
@@ -138,7 +141,8 @@ $disable_appointments = get_field( 'disable_appointments', $page_id );
     </div>
     <!-- Back to list  -->
     <div class="container back-to-list-wrapper mt-5">
-        <a href="<?php echo get_page_link( 11 ) ?>" class='back-to-list'><?php _e('назад к списку', 'nmc-theme') ?></a>
+        <a href="<?php echo get_page_link( 11 ) ?>"
+           class='back-to-list'><?php _e( 'назад к списку', 'nmc-theme' ) ?></a>
     </div>
 <?php
 /* Get footer */
