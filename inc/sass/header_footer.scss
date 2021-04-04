@@ -108,16 +108,41 @@ button:focus {
   border-bottom: 1px solid rgba(17, 82, 130, 0.5);
 }
 
+
+
+.navbar-brand {
+  margin-right: 20px;
+  img {
+    width: 114px;
+    height: 74px;
+  }
+}
+
+.header-right {
+  display: flex;
+  .header-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  .wpml-ls-statics-footer {
+    margin-bottom: 0 !important;
+  }
+}
+
 .navbarNav {
+
+  justify-content: space-between;
+
   ul {
-    width: 85%;
+    //width: 85%;
+    //margin-right: auto;
   }
 
   ul li a {
     color: #115282;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
 
     &:before {
@@ -125,7 +150,7 @@ button:focus {
       position: absolute;
       bottom: -4px;
       width: 0px;
-      height: 3px;
+      height: 2px;
       margin: 5px 0 0;
       transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
       transition-duration: 460ms;
@@ -568,6 +593,46 @@ button:focus {
         font-size: 10px;
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header-wrapper {
+    .container-sm {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .header-right {
+    .header-button {
+      font-size: 13px;
+    }
+    .wpml-ls-statics-footer {
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      .wpml-ls-link {
+        padding: 5px 7px !important;
+      }
+    }
+  }
+
+
+  .navbarNav {
+      ul li a {
+        font-size: 13px;
+      }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header-right {
+    flex-direction: column;
+    margin-top: 15px;
+    .header-button {
+      width: max-content;
+      margin-bottom: 10px;
     }
   }
 }
