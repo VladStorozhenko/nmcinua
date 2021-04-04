@@ -848,3 +848,49 @@
     }
   }
 }
+
+// services update
+
+.index-services-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  margin-bottom: 50px;
+  .services-column {
+    background-color: #115282;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 30px;
+    .title {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .list {
+      width: 100%;
+      a {
+        .service {
+          padding: 10px;
+          background: white;
+          width: 100%;
+          margin-bottom: 15px;
+          transition: all .3s 230ms;
+          &:hover {
+            background: #d4e4ef;
+            transition: all .3s 230ms;
+          }
+          h4 {
+            text-align: center;
+            color: #115282;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -27,34 +27,124 @@ wp_enqueue_style( 'nmc-main-css' );
     <!-- Index services -->
     <h2 class='section-title'><?php _e( 'Услуги', 'nmc-theme' ) ?></h2>
     <div class="container">
-        <div class='services index-services'>
-			<?php
-			$services = get_posts(
-				array(
-					'post_type'        => 'service',
-					'numberposts'      => - 1,
-					'post_status'      => 'publish',
-					'suppress_filters' => '0'
-				)
-			);
-			if ( $services ) {
-				foreach ( $services as $service ) {
-					$value = get_field( 'featured', $service->ID );
-					if ( $value[0] == 'checked' ) {
+		<?php
+		$services = get_posts( array(
+			'post_type'        => 'service',
+			'numberposts'      => - 1,
+			'post_status'      => 'publish',
+			'suppress_filters' => '0'
+		) );
+
+		$services_1 = array();
+		$services_2 = array();
+		$services_3 = array();
+
+		foreach ( $services as $service ) {
+			$id       = $service->ID;
+			$category = get_field( 'featured_category', $id );
+
+			switch ( $category ) {
+				case 1:
+					array_push( $services_1, $service );
+					break;
+				case 2:
+					array_push( $services_2, $service );
+					break;
+				case 3:
+					array_push( $services_3, $service );
+					break;
+			}
+		}
+
+		?>
+        <div class="index-services-new">
+            <div class="services-column">
+                <h2 class="title"><?php _e( 'Для взрослых', 'nmc-theme' ) ?></h2>
+                <div class="list">
+					<?php
+					foreach ( $services_1 as $service ) {
+						$id    = $service->ID;
+						$link  = get_permalink( $id );
+						$title = get_field( 'featured_name', $id ) ? get_field( 'featured_name', $id ) : get_the_title( $id );
 						?>
-                        <a href="<?php echo get_permalink( $service->ID ) ?>">
+                        <a href="<?php echo $link ?>">
                             <div class="service">
-                                <div class="service-bg-image block-background"
-                                     style='background-image: url("<?php echo get_the_post_thumbnail_url( $service->ID ) ?>")'></div>
-                                <h2 class='service-name'><?php echo $service->post_title ?></h2>
+                                <h4 class="service-title"><?php echo $title; ?></h4>
                             </div>
                         </a>
 						<?php
 					}
-				}
-			}
-			?>
+					?>
+                </div>
+            </div>
+            <div class="services-column">
+                <h2 class="title"><?php _e( 'Для детей', 'nmc-theme' ) ?></h2>
+                <div class="list">
+					<?php
+					foreach ( $services_2 as $service ) {
+						$id    = $service->ID;
+						$link  = get_permalink( $id );
+						$title = get_field( 'featured_name', $id ) ? get_field( 'featured_name', $id ) : get_the_title( $id );
+						?>
+                        <a href="<?php echo $link ?>">
+                            <div class="service">
+                                <h4 class="service-title"><?php echo $title; ?></h4>
+                            </div>
+                        </a>
+						<?php
+					}
+					?>
+                </div>
+            </div>
+            <div class="services-column">
+                <h2 class="title"><?php _e( 'Диагностика', 'nmc-theme' ) ?></h2>
+                <div class="list">
+					<?php
+					foreach ( $services_3 as $service ) {
+						$id    = $service->ID;
+						$link  = get_permalink( $id );
+						$title = get_field( 'featured_name', $id ) ? get_field( 'featured_name', $id ) : get_the_title( $id );
+						?>
+                        <a href="<?php echo $link ?>">
+                            <div class="service">
+                                <h4 class="service-title"><?php echo $title; ?></h4>
+                            </div>
+                        </a>
+						<?php
+					}
+					?>
+                </div>
+            </div>
         </div>
+        <!--        <div class='services index-services'>-->
+		<?php
+		//			$services = get_posts(
+		//				array(
+		//					'post_type'        => 'service',
+		//					'numberposts'      => - 1,
+		//					'post_status'      => 'publish',
+		//					'suppress_filters' => '0'
+		//				)
+		//			);
+		//			if ( $services ) {
+		//				foreach ( $services as $service ) {
+		//					$value = get_field( 'featured', $service->ID );
+		//					if ( $value[0] == 'checked' ) {
+		?>
+        <!--                        <a href="--><?php //echo get_permalink( $service->ID ) ?><!--">-->
+        <!--                            <div class="service">-->
+        <!--                                <div class="service-bg-image block-background"-->
+        <!--                                     style='background-image: url("-->
+		<?php //echo get_the_post_thumbnail_url( $service->ID ) ?><!--")'></div>-->
+        <!--                                <h2 class='service-name'>--><?php //echo $service->post_title ?><!--</h2>-->
+        <!--                            </div>-->
+        <!--                        </a>-->
+		<?php
+		//					}
+		//				}
+		//			}
+		?>
+        <!--        </div>-->
     </div>
     <div class="text-center">
         <a href="<?php echo get_page_link( 9 ) ?>">
